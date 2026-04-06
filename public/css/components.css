@@ -1,0 +1,127 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --ink: #0d0d0d;
+    --bg: #f8fafc;
+    --paper: #f5f0e8;
+    --cream: #faf7f2;
+    --primary: #4f46e5;
+    --success: #4CAF50;
+    --danger: #FF4444;
+    --gold: #c9972c;
+    --sage: #4a7c59;
+    --slate: #3a4a5c;
+    --muted: #6b7280;
+    --border: #e5e7eb;
+    --card: #ffffff;
+    --text: #111827;
+    --nav-h: 64px;
+    --shadow: 0 4px 24px rgba(13, 13, 13, 0.08);
+    --shadow-lg: 0 12px 48px rgba(13, 13, 13, 0.14);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--ink);
+    min-height: 100vh;
+}
+
+
+/* TOAST */
+.toast {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    background: var(--ink);
+    color: var(--paper);
+    padding: 14px 20px;
+    border-radius: 4px;
+    font-size: 12px;
+    box-shadow: var(--shadow-lg);
+    transform: translateY(80px) scale(.95);
+    opacity: 0;
+    transition: all .3s;
+    z-index: 9999;
+    border-left: 4px solid var(--success);
+    max-width: 320px;
+}
+
+.toast.show {
+    transform: none;
+    opacity: 1;
+}
+
+/* File Upload */
+
+.file-input {
+    display: none;
+    /* Hide default input */
+}
+
+.file-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--surface2);
+    border: 2px dashed var(--border);
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: 0.3s ease;
+}
+
+.file-label:hover {
+    border-color: var(--accent);
+    background: var(--surface2);
+}
+
+.file-text {
+    color: #555;
+}
+
+.file-button {
+    background: var(--accent);
+    color: white;
+    padding: 6px 12px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.file-name {
+    margin-top: 8px;
+    font-size: 14px;
+    color: #333;
+}
+
+/* Button */
+.btn-save {
+    border: none;
+    padding: 10px 15px;
+    background: var(--primary);
+    color: white;
+    cursor: pointer;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 15px;
+}
+
+.btn-cancel {
+    padding: 10px;
+    border-radius: 25px;
+    min-width: 70px;
+    cursor: pointer;
+    font-size: 15px;
+    border: 1px solid var(--slate);
+}
